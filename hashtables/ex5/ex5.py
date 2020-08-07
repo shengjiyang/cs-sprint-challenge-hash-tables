@@ -5,9 +5,8 @@ from collections import defaultdict
 def finder(files, queries):
     d = defaultdict(list)
     for f, q in zip(files, queries):
-        if len(files) <= 3:
-            if f[-len(q):] == q:
-                d[f].append(q)
+        if f[-len(q):] == q:
+            d[f].append(q)
 
     return [i for i in d]
 
