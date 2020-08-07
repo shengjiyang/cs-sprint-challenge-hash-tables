@@ -1,14 +1,7 @@
-# Your code here
-
-
+# hashtables/ex5/ex5.py
 
 def finder(files, queries):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
-    return result
+    pass
 
 
 if __name__ == "__main__":
