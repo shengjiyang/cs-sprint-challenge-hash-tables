@@ -25,11 +25,9 @@ if __name__ == "__main__":
 
     # arrays = [[1, 2], [1]]
 
-    arrays.append([1, 2, 3])
-    arrays.append([1, 4, 5, 3])
-    arrays.append([1, 6, 7, 3])
-
-    print(intersection(arrays))
+    # arrays.append([1, 2, 3])
+    # arrays.append([1, 4, 5, 3])
+    # arrays.append([1, 6, 7, 3])
 
     # arrays.append(list(range(1000000, 2000000)) + [1, 2, 3])
     # arrays.append(list(range(2000000, 3000000)) + [1, 2, 3])

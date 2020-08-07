@@ -1,5 +1,11 @@
 import numpy as np
 
+# NOTE: I attemped this problem with a dictionary, passing
+#       the first 3 tests, but the runtime was signifigantly
+#       slower compared to what you see below. The dictionary
+#       solution was so slow that the program would time out
+#       before hitting the final test.
+
 def has_negatives(a):
     where = np.where(np.array(a) < 0)
 
