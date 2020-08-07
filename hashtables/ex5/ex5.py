@@ -1,7 +1,14 @@
 # hashtables/ex5/ex5.py
 
 def finder(files, queries):
-    pass
+    d = {}
+    for f in files:
+        for q in queries:
+            if f[-len(q):] == q:
+                d[q] = f
+
+    return [i for i in list(d.values())]
+
 
 
 if __name__ == "__main__":
@@ -16,3 +23,4 @@ if __name__ == "__main__":
         "baz"
     ]
     print(finder(files, queries))
+    print(finder(files, queries=["qux"]))
