@@ -1,16 +1,23 @@
 import numpy as np
 
 def has_negatives(a):
-    d = {}
-    for i in a:
-        if a.count(-i) > 0:
-            d[i] = i
+    where = np.where(np.array(a) < 0)
 
-    if np.where(np.array(a) < 0) == np.array([]):
+    if len(where[0]) == 0:
         return []
 
     else:
-        return [i for i in d if i > 0]
+        neg = []
+        for i in where[0]:
+            neg.append(a[i])
+
+        pos = []
+        for i in neg:
+            if a.count(-1) > 0:
+                pos.append(-i)
+
+        return pos
+    
 
 
 if __name__ == "__main__":
@@ -18,7 +25,7 @@ if __name__ == "__main__":
     print(has_negatives([1,2,3,-4]))
     print(has_negatives([-1, -2, 1, 2, 3, 4, -4]))
 
-    # a = list(range(5000000))
-    # a += [-1,-2,-3]
+    a = list(range(5000000))
+    a += [-1,-2,-3]
 
-    # print(has_negatives(a))
+    print(has_negatives(a))
